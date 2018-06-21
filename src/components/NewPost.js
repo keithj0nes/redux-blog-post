@@ -7,7 +7,7 @@ class NewPost extends React.Component {
     body: ''
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     if(this.state.title.trim() && this.state.body.trim()){
       console.log('submtting ');
@@ -15,7 +15,7 @@ class NewPost extends React.Component {
     }
   }
 
-  handleInputChange = (e) => {
+  handleInputChange = e => {
     this.setState({[e.target.name]: e.target.value})
   }
 
@@ -26,7 +26,7 @@ class NewPost extends React.Component {
   render(){
     return (
       <div>
-        <form onSubmit={ this.handleSubmit } style={{maxWidth: "600px"}}>
+        <form onSubmit={ this.handleSubmit } >
           <div className="form-group">
             <input
               type="text"
